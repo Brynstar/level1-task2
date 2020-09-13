@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/a"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/b"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/ab"
+        app:layout_constraintStart_toEndOf="@+id/a"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/ab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/ab"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/a_one_true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/t"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_one_true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a" />
+
+    <TextView
+        android:id="@+id/b_one_true"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/t"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/ab_field_one"
+        app:layout_constraintStart_toEndOf="@+id/a_one_true"
+        app:layout_constraintTop_toBottomOf="@+id/b" />
+
+    <EditText
+        android:id="@+id/ab_field_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints="string"
+        android:digits="tfTF"
+        android:ems="5"
+        android:hint="@string/t_or_f"
+        android:inputType="text"
+        android:maxLength="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_one_true"
+        app:layout_constraintTop_toBottomOf="@+id/ab" />
+
+    <TextView
+        android:id="@+id/a_two_true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/t"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_two_false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_one_true" />
+
+    <TextView
+        android:id="@+id/b_two_false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/f"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/ab_field_two"
+        app:layout_constraintStart_toEndOf="@+id/a_two_true"
+        app:layout_constraintTop_toBottomOf="@+id/b_one_true" />
+
+    <EditText
+        android:id="@+id/ab_field_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints="string"
+        android:digits="tfTF"
+        android:ems="5"
+        android:hint="@string/t_or_f"
+        android:inputType="text"
+        android:maxLength="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_two_false"
+        app:layout_constraintTop_toBottomOf="@+id/ab_field_one" />
+
+    <TextView
+        android:id="@+id/a_three_false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/f"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_three_true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_two_true" />
+
+    <TextView
+        android:id="@+id/b_three_true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/t"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/ab_field_three"
+        app:layout_constraintStart_toEndOf="@+id/a_three_false"
+        app:layout_constraintTop_toBottomOf="@+id/b_two_false" />
+
+    <EditText
+        android:id="@+id/ab_field_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints="string"
+        android:digits="tfTF"
+        android:ems="5"
+        android:hint="@string/t_or_f"
+        android:inputType="text"
+        android:maxLength="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_three_true"
+        app:layout_constraintTop_toBottomOf="@+id/ab_field_two" />
+
+    <TextView
+        android:id="@+id/a_four_false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/f"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/b_four_false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a_three_false" />
+
+    <TextView
+        android:id="@+id/b_four_false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/f"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/ab_field_four"
+        app:layout_constraintStart_toEndOf="@+id/a_four_false"
+        app:layout_constraintTop_toBottomOf="@+id/b_three_true" />
+
+    <EditText
+        android:id="@+id/ab_field_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints="string"
+        android:digits="tfTF"
+        android:ems="5"
+        android:hint="@string/t_or_f"
+        android:inputType="text"
+        android:maxLength="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/b_four_false"
+        app:layout_constraintTop_toBottomOf="@+id/ab_field_three" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

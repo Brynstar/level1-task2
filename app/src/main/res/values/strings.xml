@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MadLevel1Task2</string>
+    <string name="title">Conjuction (AND)</string>
+    <string name="submit">SUBMIT</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="t">T</string>
+    <string name="f">F</string>
+    <string name="ab">A^B</string>
+    <string name="t_or_f">T or F</string>
+    <string name="amount_correct">%d answers are correct</string>
+    <string name="empty_fields">Please fill in all the fields</string>
+</resources>
